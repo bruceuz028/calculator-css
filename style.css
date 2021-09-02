@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Klee+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  background: #3b4664;
+  font-family: "Klee One", cursive;
+  font-weight: 100 !important;
+}
+
+main {
+  width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 24px;
+  margin-left: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #262c42;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: red;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #1E0836;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #1E0836;
+          box-shadow: 0 0 1px #1E0836;
+}
+
+input:checked + .slider:before {
+  background-color: #03DAD4;
+  -webkit-transform: translateX(35px);
+          transform: translateX(35px);
+}
+
+.back {
+  background-color: #17062A;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+}
+
+.just {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.screen {
+  background-color: #181F32;
+  padding: 20px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+  font-size: 35px;
+  font-family: "Klee One", cursive;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  text-align: end;
+}
+
+.screen::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.screen:-ms-input-placeholder {
+  color: #fff;
+}
+
+.screen::-ms-input-placeholder {
+  color: #fff;
+}
+
+.screen::placeholder {
+  color: #fff;
+}
+
+.numbers {
+  background-color: #252D44;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.line:nth-child(5) {
+  margin-bottom: 0;
+}
+
+.number {
+  cursor: pointer;
+  border-bottom: 3px solid #9D9494;
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  background-color: #EAE3DB;
+  color: #414450;
+  font-weight: bold;
+  font-size: 23px;
+  border-radius: 10px;
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+}
+
+.bg {
+  background-color: #331B4D;
+}
+
+.number:active {
+  border-bottom: none;
+}
+
+.ms {
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+  cursor: pointer;
+  border-bottom: 3px solid #94261A;
+  width: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  background-color: #D13F30;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.ms:active {
+  border-bottom: none;
+}
+
+.del {
+  font-size: 18px !important;
+  background-color: #647299 !important;
+  border-bottom: 3px solid #3D4969 !important;
+  color: #fff !important;
+}
+
+.reset {
+  -webkit-transition: .5s linear;
+  transition: .5s linear;
+  cursor: pointer;
+  border-bottom: 3px solid #94261A;
+  width: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  background-color: #D13F30;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.cor {
+  color: yellow;
+}
+
+.color {
+  color: #00DECF;
+}
+
+.g {
+  background-color: #56077C;
+}
+
+.b {
+  background-color: #00DECF;
+}
+
+.reset:active {
+  border-bottom: none !important;
+}
+
+.del:active {
+  border-bottom: none !important;
+}
+
+@media (max-width: 375px) {
+  main {
+    width: 350px;
+  }
+  .numbers {
+    padding: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
